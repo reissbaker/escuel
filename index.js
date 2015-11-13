@@ -1,7 +1,8 @@
 'use strict';
 
-exports.sql = require('./lib/sql');
-exports.orm = require('./lib/orm');
+exports.sql = require('./build/sql');
+exports.orm = require('./build/orm');
 
-exports.define = exports.orm.define;
+exports.directory = exports.orm.directory;
+exports.file = exports.orm.file;
 
