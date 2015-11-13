@@ -1,8 +1,16 @@
 'use strict';
 
-exports.sql = require('./build/sql');
-exports.orm = require('./build/orm');
+const readers = require('./build/readers');
 
-exports.directory = exports.orm.directory;
-exports.file = exports.orm.file;
+exports.file = readers.file;
+exports.directory = readers.directory;
+
+exports.transform = require('./build/util/transform');
+
+exports.clients = {
+  mock: require('./build/clients/mock-client'),
+  pg: require('./build/clients/pg-client')
+};
+
+exports.pg = exports.clients.pg;
 
