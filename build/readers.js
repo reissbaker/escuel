@@ -24,7 +24,8 @@ function file(filename) {
   var fileContents = fs.readFileSync(filename, 'utf-8');
   var template = _.template(fileContents);
 
-  return function (data) {
+  return function () {
+    var data = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
     return template(data);
   };
 };
