@@ -3,6 +3,12 @@
   "version": "0.0.1",
   "description": "sql queries",
   "main": "index.js",
+  "repository": [
+    {
+      "type": "git",
+      "url": "https://github.com/reissbaker/escuel.git"
+    }
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rm -rf build/ && ./node_modules/.bin/babel --out-dir build/ --presets es2015 lib/"
