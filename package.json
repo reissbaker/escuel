@@ -10,7 +10,7 @@
     }
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "./node_modules/.bin/mocha --recursive test/",
     "build": "rm -rf build/ && ./node_modules/.bin/babel --out-dir build/ --presets es2015 lib/"
   },
   "keywords": [
@@ -23,6 +23,8 @@
   },
   "devDependencies": {
     "babel-cli": "^6.1.18",
-    "babel-preset-es2015": "^6.1.18"
+    "babel-preset-es2015": "^6.1.18",
+    "chai": "^3.4.1",
+    "mocha": "^2.3.3"
   }
 }
