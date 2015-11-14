@@ -30,9 +30,9 @@ function file(filename) {
   };
 };
 
-function directory(args) {
-  var directory = args.directory;
-  var fileWhitelist = args.fileWhitelist;
+function directory(directory) {
+  var opts = arguments.length <= 1 || arguments[1] === undefined ? {} : arguments[1];
+  var fileWhitelist = opts.fileWhitelist;
 
   var files = findSQLFiles(directory, fileWhitelist);
 
