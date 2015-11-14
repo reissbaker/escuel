@@ -39,7 +39,7 @@ function directory(directory) {
   return _.reduce(files, function (sqlModule, filepath) {
     var basename = path.basename(filepath, '.sql');
 
-    sqlModule[basename] = file(path.join(directory, file));
+    sqlModule[basename] = file(path.join(directory, filepath));
 
     return sqlModule;
   }, {});
